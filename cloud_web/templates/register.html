@@ -1,0 +1,17 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    </head>
+    <body class="register-body">
+        <div class="register-container">
+            <h2>User Registiration</h2>
+            <form method="post">
+                {% csrf_token %}
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password">
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </body>
+</html>
